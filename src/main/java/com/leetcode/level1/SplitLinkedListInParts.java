@@ -17,9 +17,35 @@ public class SplitLinkedListInParts {
   */
 
   public static ListNode[] splitListToParts(ListNode head, int k) {
-    new ListNode(1, new ListNode(2, new ListNode(3)));
+    ListNode[] list_node = new ListNode[k];
 
-    return new ListNode[]{};
+    if (head == null) {
+      return list_node;
+    }
+
+    ListNode curNode = head;
+    int count = 0;
+
+    while (curNode != null) {
+      curNode = curNode.next;
+      ++count;
+    }
+
+    int size = count / k, rem = count % k;
+
+    curNode = head;
+    for (int i = 0; i < k; i++) {
+      ListNode dummy = new ListNode(0);
+      ListNode temp = dummy;
+
+      for (int j = 0; j < size + (i < rem ? 1 : 0); j++) {
+        temp.next = new ListNode(curNode.val);
+        temp = temp.next;
+        curNode = curNode.next;
+      }
+      list_node[i] = dummy.next;
+    }
+    return list_node;
   }
 
 }

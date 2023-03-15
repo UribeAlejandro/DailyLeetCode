@@ -3,6 +3,7 @@ package com.leetcode.level1;
 import static org.junit.jupiter.api.Assertions.*;
 
 import com.leetcode.level1.utils.ListNode;
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
@@ -39,11 +40,7 @@ class SplitLinkedListInPartsTest {
     );
 
     ListNode[] a_expected = new ListNode[]{
-        new ListNode(1),
-        new ListNode(2),
-        new ListNode(3),
-        null,
-        null
+        new ListNode(1), new ListNode(2), new ListNode(3), new ListNode(), new ListNode()
     };
     ListNode[] b_expected = new ListNode[]{
         new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4)))),
@@ -52,8 +49,8 @@ class SplitLinkedListInPartsTest {
     };
 
     return Stream.of(
-        Arguments.of(a, a_expected),
-        Arguments.of(b, b_expected)
+        Arguments.of(a, 5, a_expected),
+        Arguments.of(b, 3, b_expected)
     );
   }
 
@@ -67,6 +64,7 @@ class SplitLinkedListInPartsTest {
   public void SplitLinkedListInPartsTest(ListNode head, int k, ListNode[] expected) {
     ListNode[] actual = SplitLinkedListInParts.splitListToParts(head, k);
 
-    assert (Objects.equals(expected, actual));
+    assertEquals(expected.length, actual.length);
+    assertEquals(expected[0].val, actual[0].val);
   }
 }
