@@ -1,4 +1,4 @@
-package com.leetcode.level1;
+package com.leetcode.level1.day1;
 
 public class FindPivotIndex {
 

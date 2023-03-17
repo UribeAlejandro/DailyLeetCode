@@ -1,10 +1,9 @@
-package com.leetcode.level1;
+package com.leetcode.level1.day1;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import com.leetcode.level1.extra.SplitLinkedListInParts;
 import com.leetcode.level1.utils.ListNode;
-import java.util.Arrays;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.BeforeEach;

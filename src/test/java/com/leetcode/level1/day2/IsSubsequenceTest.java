@@ -1,4 +1,4 @@
-package com.leetcode.level1;
+package com.leetcode.level1.day2;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,14 +10,14 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-class IsomorphicStringsTest {
+class IsSubsequenceTest {
 
-  public static Stream<Arguments> IsomorphicStringsTest() {
+  public static Stream<Arguments> IsSubsequenceTest() {
     return Stream.of(
-        Arguments.of("egg", "add", true),
-        Arguments.of("foo", "bar", false),
-        Arguments.of("paper", "title", true),
-        Arguments.of("bbbaaaba", "aaabbbba", false)
+        Arguments.of("", "abc", true),
+        Arguments.of("b", "abc", true),
+        Arguments.of("abc", "ahbgdc", true),
+        Arguments.of("axc", "ahbgdc", false)
     );
   }
 
@@ -28,12 +28,8 @@ class IsomorphicStringsTest {
   @MethodSource
   @ParameterizedTest
   @Timeout(value = 100, unit = TimeUnit.MILLISECONDS)
-  public void IsomorphicStringsTest(String s, String t, boolean expected) {
-
-    boolean actual = IsomorphicStrings.isIsomorphic(s, t);
-
+  public void IsSubsequenceTest(String s, String t, boolean expected) {
+    boolean actual = IsSubsequence.IsSubsequence(s, t);
     assertEquals(expected, actual);
   }
-
-
 }

@@ -1,4 +1,4 @@
-package com.leetcode.level1;
+package com.leetcode.level1.extra;
 
 import com.leetcode.level1.utils.ListNode;
 
