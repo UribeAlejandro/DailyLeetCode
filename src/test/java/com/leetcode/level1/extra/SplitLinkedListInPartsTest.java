@@ -1,5 +1,6 @@
-package com.leetcode.level1.day1;
+package com.leetcode.level1.extra;
 
+import static com.leetcode.level1.utils.ListNode.iterateListNode;
 import static org.junit.jupiter.api.Assertions.*;
 
 import com.leetcode.level1.extra.SplitLinkedListInParts;
@@ -64,6 +65,9 @@ class SplitLinkedListInPartsTest {
     ListNode[] actual = SplitLinkedListInParts.splitListToParts(head, k);
 
     assertEquals(expected.length, actual.length);
-    assertEquals(expected[0].val, actual[0].val);
+    for (int i = 0; i < expected.length; i++) {
+      assertEquals(iterateListNode(expected[i]), iterateListNode(actual[i]));
+    }
+
   }
 }

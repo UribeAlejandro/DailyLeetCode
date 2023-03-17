@@ -1,5 +1,8 @@
 package com.leetcode.level1.utils;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ListNode {
 
   public int val;
@@ -18,12 +21,17 @@ public class ListNode {
   }
 
 
-  public static ListNode iterateListNode(ListNode a) {
-    if (a == null) {
-      return null;
-    } else {
-      System.out.println(a.val);
-      return iterateListNode(a.next);
+  public static List<Integer> iterateListNode(ListNode head) {
+    List<Integer> a = new ArrayList<>();
+
+    while (head.next != null) {
+      a.add(head.val);
+      head = head.next;
     }
+    if (head.next == null) {
+      a.add(head.val);
+    }
+
+    return a;
   }
 }

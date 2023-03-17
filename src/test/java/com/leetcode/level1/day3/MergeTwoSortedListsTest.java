@@ -1,5 +1,6 @@
 package com.leetcode.level1.day3;
 
+import static com.leetcode.level1.utils.ListNode.iterateListNode;
 import static org.junit.jupiter.api.Assertions.*;
 
 import com.leetcode.level1.utils.ListNode;
@@ -16,21 +17,22 @@ class MergeTwoSortedListsTest {
         Arguments.of(
             new ListNode(1, new ListNode(2, new ListNode(4))),
             new ListNode(1, new ListNode(3, new ListNode(4))),
-            new ListNode(1, new ListNode(1, new ListNode(3, new ListNode(4))))
+            new ListNode(1,
+                new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(4))))))
         ),
         Arguments.of(
             new ListNode(),
             new ListNode(),
-            new ListNode()
+            new ListNode(0, new ListNode(0))
         ),
         Arguments.of(
             new ListNode(),
             new ListNode(0),
-            new ListNode(0)
+            new ListNode(0, new ListNode(0))
         ),
         Arguments.of(
-            new ListNode(2, null),
-            new ListNode(1, null),
+            new ListNode(2),
+            new ListNode(1),
             new ListNode(1, new ListNode(2))
         )
     );
@@ -45,10 +47,10 @@ class MergeTwoSortedListsTest {
   public void MergeTwoSortedListsTest(ListNode list1, ListNode list2, ListNode expected) {
     ListNode actual = MergeTwoSortedLists.mergeTwoLists(list1, list2);
 
-    assertEquals(expected.val, actual.val);
-    if (expected.next != null && actual.next != null) {
-      assertEquals(expected.next.val, actual.next.val);
-    }
+    System.out.println(iterateListNode(expected));
+    System.out.println(iterateListNode(actual));
+
+    assertEquals(iterateListNode(expected), iterateListNode(actual));
 
   }
 }

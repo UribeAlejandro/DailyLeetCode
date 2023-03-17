@@ -19,7 +19,7 @@ class ReverseLinkedListTest {
                 new ListNode(2,
                     new ListNode(3,
                         new ListNode(4,
-                            new ListNode(5)
+                            new ListNode(5, null)
                         )
                     )
                 )
@@ -28,7 +28,7 @@ class ReverseLinkedListTest {
                 new ListNode(4,
                     new ListNode(3,
                         new ListNode(2,
-                            new ListNode(1)
+                            new ListNode(1, null)
                         )
                     )
                 )
@@ -36,7 +36,7 @@ class ReverseLinkedListTest {
         ),
         Arguments.of(
             new ListNode(1, new ListNode(2)),
-            new ListNode(2, new ListNode(1))
+            new ListNode(2, new ListNode(1, null))
         ),
         Arguments.of(
             new ListNode(),
@@ -49,6 +49,10 @@ class ReverseLinkedListTest {
   @ParameterizedTest
   public void ReverseLinkedListTest(ListNode head, ListNode expected) {
     ListNode actual = ReverseLinkedList.reverseList(head);
+
+    System.out.println(iterateListNode(expected));
+    System.out.println(iterateListNode(actual));
+
     assertEquals(iterateListNode(expected), iterateListNode(actual));
   }
 
