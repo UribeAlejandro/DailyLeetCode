@@ -21,7 +21,7 @@ public class ListNode {
   }
 
 
-  public static List<Integer> iterateListNode(ListNode head) {
+  public static List<Integer> ListNodeToArray(ListNode head) {
     List<Integer> a = new ArrayList<>();
 
     while (head.next != null) {
@@ -31,6 +31,7 @@ public class ListNode {
     if (head.next == null) {
       a.add(head.val);
     }
+    System.out.println(a);
 
     return a;
   }

@@ -1,6 +1,6 @@
 package com.leetcode.level1.day3;
 
-import static com.leetcode.level1.utils.ListNode.iterateListNode;
+import static com.leetcode.level1.utils.ListNode.ListNodeToArray;
 import static org.junit.jupiter.api.Assertions.*;
 
 import com.leetcode.level1.utils.ListNode;
@@ -47,10 +47,10 @@ class MergeTwoSortedListsTest {
   public void MergeTwoSortedListsTest(ListNode list1, ListNode list2, ListNode expected) {
     ListNode actual = MergeTwoSortedLists.mergeTwoLists(list1, list2);
 
-    System.out.println(iterateListNode(expected));
-    System.out.println(iterateListNode(actual));
+    System.out.println(ListNodeToArray(expected));
+    System.out.println(ListNodeToArray(actual));
 
-    assertEquals(iterateListNode(expected), iterateListNode(actual));
+    assertEquals(ListNodeToArray(expected), ListNodeToArray(actual));
 
   }
 }
