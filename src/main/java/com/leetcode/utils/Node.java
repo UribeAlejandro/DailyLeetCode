@@ -1,4 +1,4 @@
-package com.leetcode.level1.utils;
+package com.leetcode.utils;
 
 import java.util.List;
 

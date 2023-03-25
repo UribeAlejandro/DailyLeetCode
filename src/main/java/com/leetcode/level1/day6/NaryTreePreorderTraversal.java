@@ -1,6 +1,6 @@
 package com.leetcode.level1.day6;
 
-import com.leetcode.level1.utils.Node;
+import com.leetcode.utils.Node;
 import java.util.ArrayList;
 import java.util.List;
 

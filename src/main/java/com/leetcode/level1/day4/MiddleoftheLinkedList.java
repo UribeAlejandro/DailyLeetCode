@@ -1,6 +1,6 @@
 package com.leetcode.level1.day4;
 
-import com.leetcode.level1.utils.ListNode;
+import com.leetcode.utils.ListNode;
 
 public class MiddleoftheLinkedList {
   /*

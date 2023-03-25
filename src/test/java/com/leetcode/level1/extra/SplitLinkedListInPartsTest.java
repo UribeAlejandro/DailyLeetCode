@@ -1,9 +1,9 @@
 package com.leetcode.level1.extra;
 
-import static com.leetcode.level1.utils.ListNode.ListNodeToArray;
+import static com.leetcode.utils.ListNode.ListNodeToArray;
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.leetcode.level1.utils.ListNode;
+import com.leetcode.utils.ListNode;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.BeforeEach;

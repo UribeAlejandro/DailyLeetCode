@@ -1,6 +1,6 @@
 package com.leetcode.level1.day3;
 
-import com.leetcode.level1.utils.ListNode;
+import com.leetcode.utils.ListNode;
 
 public class MergeTwoSortedLists {
   /*

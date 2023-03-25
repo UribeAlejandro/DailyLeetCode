@@ -1,6 +1,6 @@
 package com.leetcode.level1.extra;
 
-import com.leetcode.level1.utils.ListNode;
+import com.leetcode.utils.ListNode;
 
 public class SplitLinkedListInParts {
   /*
